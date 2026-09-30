@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#080312] text-white flex flex-col font-sans selection:bg-[#7c3aed] selection:text-white">
+      <div className="min-h-screen bg-[#140a12] text-[#ede4d8] flex flex-col font-sans selection:bg-[#c49b7c] selection:text-[#140a12]">
         
         {/* Navigation Bar */}
         <Navbar />

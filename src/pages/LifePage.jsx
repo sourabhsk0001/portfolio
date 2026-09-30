@@ -31,32 +31,32 @@ export default function LifePage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header Box */}
-        <div className="p-8 sm:p-10 rounded-2xl bg-[#120726] border border-[#2d1357]">
+        <div className="p-8 sm:p-10 rounded-2xl bg-[#180d15] border border-[#3a1f30]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e0d3d] border border-[#431980] text-xs font-semibold text-[#d8b4fe] mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-semibold text-[#d8b4fe] mb-3">
                 <Heart className="w-3.5 h-3.5" />
                 <span>Life, Journey & Background</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-[#ede4d8] tracking-tight">
                 Education, Goals & Experience
               </h1>
-              <p className="mt-2 text-sm sm:text-base text-gray-300 max-w-2xl leading-relaxed">
+              <p className="mt-2 text-sm sm:text-base text-[#a89889] max-w-2xl leading-relaxed">
                 A closer look at my studies at KIIT, my internships at SAIL and CCL, 
                 my verified technical certifications, and the hobbies that keep me inspired.
               </p>
             </div>
 
             {/* Sub-tab Navigation */}
-            <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-lg bg-[#0d051f] border border-[#2d1357]">
+            <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-lg bg-[#180d15] border border-[#3a1f30]">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer ${
                     activeTab === tab.id
-                      ? 'bg-[#7c3aed] text-white border border-[#9333ea]'
-                      : 'text-gray-300 hover:text-white hover:bg-[#1a0b36]'
+                      ? 'bg-[#c49b7c] text-[#140a12] border border-[#c49b7c]'
+                      : 'text-[#a89889] hover:text-[#ede4d8] hover:bg-[#261620]'
                   }`}
                 >
                   {tab.label}
@@ -68,31 +68,31 @@ export default function LifePage() {
 
         {/* 1. CAREER GOAL SECTION */}
         {(activeTab === 'all' || activeTab === 'goal') && (
-          <div className="p-7 sm:p-8 rounded-xl bg-[#120726] border border-[#2d1357]">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#c084fc] mb-3">
+          <div className="p-7 sm:p-8 rounded-xl bg-[#180d15] border border-[#3a1f30]">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9b6b8a] mb-3">
               <Target className="w-4 h-4" />
               <span>{LIFE_DATA.careerGoal.title}</span>
             </div>
 
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-2xl font-bold text-[#ede4d8]">
               {LIFE_DATA.careerGoal.headline}
             </h2>
 
-            <div className="mt-4 space-y-3 text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
+            <div className="mt-4 space-y-3 text-sm sm:text-base text-[#a89889] leading-relaxed max-w-4xl">
               {LIFE_DATA.careerGoal.paragraphs.map((p, idx) => (
                 <p key={idx}>{p}</p>
               ))}
             </div>
 
-            <div className="mt-6 pt-5 border-t border-[#220d47]">
-              <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
+            <div className="mt-6 pt-5 border-t border-[#2a1521]">
+              <div className="text-xs font-semibold uppercase tracking-wider text-[#a89889] mb-2.5">
                 Primary Interests & Focus
               </div>
               <div className="flex flex-wrap gap-2">
                 {LIFE_DATA.careerGoal.keyInterests.map((interest, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 rounded-md text-xs font-medium bg-[#1b0b38] text-white border border-[#3b1773]"
+                    className="px-3 py-1 rounded-md text-xs font-medium bg-[#261620] text-[#ede4d8] border border-[#3a1f30]"
                   >
                     {interest}
                   </span>
@@ -104,37 +104,37 @@ export default function LifePage() {
 
         {/* 2. EDUCATION SECTION */}
         {(activeTab === 'all' || activeTab === 'education') && (
-          <div className="p-7 sm:p-8 rounded-xl bg-[#120726] border border-[#2d1357]">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#c084fc] mb-3">
+          <div className="p-7 sm:p-8 rounded-xl bg-[#180d15] border border-[#3a1f30]">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9b6b8a] mb-3">
               <GraduationCap className="w-4 h-4" />
               <span>Education</span>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#ede4d8]">
                   {LIFE_DATA.education.degree}
                 </h2>
-                <div className="mt-1 text-sm font-medium text-[#c084fc]">
+                <div className="mt-1 text-sm font-medium text-[#9b6b8a]">
                   {LIFE_DATA.education.institution} • {LIFE_DATA.education.location}
                 </div>
-                <div className="mt-1 text-xs text-gray-400">
+                <div className="mt-1 text-xs text-[#a89889]">
                   {LIFE_DATA.education.duration}
                 </div>
 
-                <p className="mt-3 text-sm text-gray-300 leading-relaxed max-w-2xl">
+                <p className="mt-3 text-sm text-[#a89889] leading-relaxed max-w-2xl">
                   {LIFE_DATA.education.description}
                 </p>
 
                 <div className="mt-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-[#a89889] mb-2">
                     Key Coursework
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {LIFE_DATA.education.keyCourses.map((course, idx) => (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 rounded text-xs bg-[#180a33] text-gray-300 border border-[#2d1357]"
+                        className="px-2.5 py-1 rounded text-xs bg-[#231520] text-[#a89889] border border-[#3a1f30]"
                       >
                         {course}
                       </span>
@@ -144,14 +144,14 @@ export default function LifePage() {
               </div>
 
               {/* CGPA Badge Box */}
-              <div className="shrink-0 p-5 rounded-xl bg-[#180a33] border border-[#2d1357] text-center min-w-[150px]">
-                <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
+              <div className="shrink-0 p-5 rounded-xl bg-[#231520] border border-[#3a1f30] text-center min-w-[150px]">
+                <div className="text-xs text-[#a89889] uppercase tracking-wider font-semibold">
                   Cumulative CGPA
                 </div>
-                <div className="text-3xl font-extrabold text-white mt-1">
+                <div className="text-3xl font-extrabold text-[#ede4d8] mt-1">
                   {LIFE_DATA.education.cgpa}
                 </div>
-                <div className="text-xs text-[#c084fc] mt-1 font-medium">
+                <div className="text-xs text-[#9b6b8a] mt-1 font-medium">
                   KIIT University
                 </div>
               </div>
@@ -162,9 +162,9 @@ export default function LifePage() {
         {/* 3. INTERNSHIPS & WORK EXPERIENCE */}
         {(activeTab === 'all' || activeTab === 'internships') && (
           <div className="space-y-6">
-            <div className="border-b border-[#2d1357] pb-3">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Briefcase className="w-5 h-5 text-[#c084fc]" />
+            <div className="border-b border-[#3a1f30] pb-3">
+              <h2 className="text-2xl font-bold text-[#ede4d8] flex items-center gap-2">
+                <Briefcase className="w-5 h-5 text-[#9b6b8a]" />
                 <span>Internships & Industry Experience</span>
               </h2>
             </div>
@@ -173,45 +173,45 @@ export default function LifePage() {
               {LIFE_DATA.internships.map((internship, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-xl bg-[#120726] border border-[#2d1357] hover:border-[#4c1d95] transition-colors flex flex-col justify-between"
+                  className="p-6 rounded-xl bg-[#180d15] border border-[#3a1f30] hover:border-[#5c3050] transition-colors flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
-                      <span className="font-semibold text-[#c084fc]">
+                    <div className="flex items-center justify-between text-xs text-[#a89889] mb-2">
+                      <span className="font-semibold text-[#9b6b8a]">
                         {internship.company}
                       </span>
                       <span>{internship.period}</span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-[#ede4d8]">
                       {internship.role}
                     </h3>
-                    <p className="text-xs text-gray-400 mt-0.5 mb-3">
+                    <p className="text-xs text-[#a89889] mt-0.5 mb-3">
                       {internship.department} • {internship.location}
                     </p>
 
-                    <p className="text-sm text-gray-300 leading-relaxed mb-4">
+                    <p className="text-sm text-[#a89889] leading-relaxed mb-4">
                       {internship.summary}
                     </p>
 
                     {/* Challenge and Solution */}
-                    <div className="space-y-2 p-3.5 rounded-lg bg-[#180a33] border border-[#2d1357] text-xs">
+                    <div className="space-y-2 p-3.5 rounded-lg bg-[#231520] border border-[#3a1f30] text-xs">
                       <div>
-                        <strong className="text-white">Challenge: </strong>
-                        <span className="text-gray-300">{internship.challenge}</span>
+                        <strong className="text-[#ede4d8]">Challenge: </strong>
+                        <span className="text-[#a89889]">{internship.challenge}</span>
                       </div>
                       <div>
-                        <strong className="text-[#c084fc]">Solution & Impact: </strong>
-                        <span className="text-gray-200">{internship.solution} {internship.impact}</span>
+                        <strong className="text-[#9b6b8a]">Solution & Impact: </strong>
+                        <span className="text-[#d1c8bb]">{internship.solution} {internship.impact}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-[#220d47] flex flex-wrap gap-1.5">
+                  <div className="mt-5 pt-3 border-t border-[#2a1521] flex flex-wrap gap-1.5">
                     {internship.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className="px-2 py-0.5 text-xs font-mono rounded bg-[#1b0b38] text-gray-300 border border-[#2d1357]"
+                        className="px-2 py-0.5 text-xs font-mono rounded bg-[#261620] text-[#a89889] border border-[#3a1f30]"
                       >
                         {skill}
                       </span>
@@ -226,12 +226,12 @@ export default function LifePage() {
         {/* 4. VERIFIED CERTIFICATIONS */}
         {(activeTab === 'all' || activeTab === 'certifications') && (
           <div className="space-y-6">
-            <div className="flex items-center justify-between border-b border-[#2d1357] pb-3">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Award className="w-5 h-5 text-[#c084fc]" />
+            <div className="flex items-center justify-between border-b border-[#3a1f30] pb-3">
+              <h2 className="text-2xl font-bold text-[#ede4d8] flex items-center gap-2">
+                <Award className="w-5 h-5 text-[#9b6b8a]" />
                 <span>Verified Certifications</span>
               </h2>
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-[#a89889]">
                 Direct verification links attached
               </span>
             </div>
@@ -240,25 +240,25 @@ export default function LifePage() {
               {LIFE_DATA.certifications.map((cert, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-[#120726] border border-[#2d1357] hover:border-[#4c1d95] transition-colors flex flex-col justify-between"
+                  className="p-5 rounded-xl bg-[#180d15] border border-[#3a1f30] hover:border-[#5c3050] transition-colors flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
-                      <span className="text-[#c084fc] font-semibold">{cert.issuer}</span>
+                    <div className="flex items-center justify-between text-xs text-[#a89889] mb-2">
+                      <span className="text-[#9b6b8a] font-semibold">{cert.issuer}</span>
                       <span>{cert.date}</span>
                     </div>
 
-                    <h3 className="text-base font-bold text-white leading-snug">
+                    <h3 className="text-base font-bold text-[#ede4d8] leading-snug">
                       {cert.title}
                     </h3>
 
-                    <p className="mt-2 text-xs text-gray-300 leading-relaxed">
+                    <p className="mt-2 text-xs text-[#a89889] leading-relaxed">
                       {cert.description}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-[#220d47] flex items-center justify-between">
-                    <span className="text-xs font-mono text-gray-400">
+                  <div className="mt-4 pt-3 border-t border-[#2a1521] flex items-center justify-between">
+                    <span className="text-xs font-mono text-[#a89889]">
                       ID: {cert.credentialId}
                     </span>
 
@@ -267,7 +267,7 @@ export default function LifePage() {
                         href={cert.verifyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-[#c084fc] hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-[#9b6b8a] hover:text-[#ede4d8] transition-colors"
                       >
                         <span>Verify</span>
                         <ExternalLink className="w-3 h-3" />
@@ -283,9 +283,9 @@ export default function LifePage() {
         {/* 5. HOBBIES & PERSONAL INTERESTS */}
         {(activeTab === 'all' || activeTab === 'hobbies') && (
           <div className="space-y-6">
-            <div className="border-b border-[#2d1357] pb-3">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Heart className="w-5 h-5 text-[#c084fc]" />
+            <div className="border-b border-[#3a1f30] pb-3">
+              <h2 className="text-2xl font-bold text-[#ede4d8] flex items-center gap-2">
+                <Heart className="w-5 h-5 text-[#9b6b8a]" />
                 <span>Hobbies & Personal Interests</span>
               </h2>
             </div>
@@ -294,12 +294,12 @@ export default function LifePage() {
               {LIFE_DATA.hobbies.map((hobby, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-[#120726] border border-[#2d1357] hover:border-[#4c1d95] transition-colors"
+                  className="p-5 rounded-xl bg-[#180d15] border border-[#3a1f30] hover:border-[#5c3050] transition-colors"
                 >
-                  <h3 className="text-base font-bold text-white">
+                  <h3 className="text-base font-bold text-[#ede4d8]">
                     {hobby.name}
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  <p className="mt-2 text-xs sm:text-sm text-[#a89889] leading-relaxed">
                     {hobby.description}
                   </p>
                 </div>
@@ -311,9 +311,9 @@ export default function LifePage() {
         {/* 6. TECHNICAL SKILLS SUMMARY */}
         {activeTab === 'all' && (
           <div className="space-y-6">
-            <div className="border-b border-[#2d1357] pb-3">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Code2 className="w-5 h-5 text-[#c084fc]" />
+            <div className="border-b border-[#3a1f30] pb-3">
+              <h2 className="text-2xl font-bold text-[#ede4d8] flex items-center gap-2">
+                <Code2 className="w-5 h-5 text-[#9b6b8a]" />
                 <span>Technical Skills Overview</span>
               </h2>
             </div>
@@ -322,16 +322,16 @@ export default function LifePage() {
               {TECHNICAL_SKILLS.map((grp, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-[#120726] border border-[#2d1357]"
+                  className="p-5 rounded-xl bg-[#180d15] border border-[#3a1f30]"
                 >
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#c084fc] mb-3">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#9b6b8a] mb-3">
                     {grp.category}
                   </h3>
                   <div className="flex flex-wrap gap-1.5">
                     {grp.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className="px-2 py-1 text-xs font-mono rounded bg-[#180a33] text-gray-200 border border-[#2d1357]"
+                        className="px-2 py-1 text-xs font-mono rounded bg-[#231520] text-[#d1c8bb] border border-[#3a1f30]"
                       >
                         {skill}
                       </span>

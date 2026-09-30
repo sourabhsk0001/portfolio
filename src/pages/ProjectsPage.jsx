@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         <div className="p-8 sm:p-10 rounded-2xl bg-[#180d15] border border-[#3a1f30]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-semibold text-[#d8b4fe] mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-semibold text-[#c49b7c] mb-3">
                 <FolderGit2 className="w-3.5 h-3.5" />
                 <span>Portfolio & Repositories</span>
               </div>
@@ -69,11 +69,11 @@ export default function ProjectsPage() {
               <div>
                 {/* Category & Status */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-[#1e1019] text-[#d8b4fe] border border-[#5c3050]">
+                  <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-[#1e1019] text-[#c49b7c] border border-[#5c3050]">
                     {project.category}
                   </span>
                   {project.featured && (
-                    <span className="px-2 py-0.5 rounded text-xs font-medium bg-[#2d1554] text-[#ede4d8] border border-[#5b21b6]">
+                    <span className="px-2 py-0.5 rounded text-xs font-medium bg-[#261620] text-[#ede4d8] border border-[#5c3050]">
                       Featured
                     </span>
                   )}

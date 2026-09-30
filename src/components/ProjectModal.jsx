@@ -44,7 +44,7 @@ export default function ProjectModal({ project, onClose }) {
         {/* Modal Top Bar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#3a1f30] bg-[#180d15]">
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 text-xs font-semibold rounded bg-[#1e1019] text-[#d8b4fe] border border-[#5c3050]">
+            <span className="px-2.5 py-1 text-xs font-semibold rounded bg-[#1e1019] text-[#c49b7c] border border-[#5c3050]">
               {project.category}
             </span>
           </div>

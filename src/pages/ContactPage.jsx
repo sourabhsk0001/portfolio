@@ -71,7 +71,7 @@ export default function ContactPage() {
         
         {/* Page Header Box */}
         <div className="p-8 sm:p-10 rounded-2xl bg-[#180d15] border border-[#3a1f30]">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-semibold text-[#d8b4fe] mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-semibold text-[#c49b7c] mb-3">
             <Mail className="w-3.5 h-3.5" />
             <span>Contact & Resume</span>
           </div>

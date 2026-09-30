@@ -26,7 +26,7 @@ export default function LandingPage() {
           <div className="max-w-3xl">
             
             {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1d0b3d] border border-[#5c3050] text-xs font-medium text-[#d8b4fe] mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#1e1019] border border-[#5c3050] text-xs font-medium text-[#c49b7c] mb-6">
               <span className="w-2 h-2 rounded-full bg-[#c49b7c]"></span>
               <span>Available for 2026/2027 Software & AI Engineering Roles</span>
             </div>
@@ -168,7 +168,7 @@ export default function LandingPage() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-[#1d0b3d] text-[#d8b4fe] border border-[#5c3050]">
+                    <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-[#1e1019] text-[#c49b7c] border border-[#5c3050]">
                       {project.category}
                     </span>
                     <span className="text-xs text-[#a89889]">
